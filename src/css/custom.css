@@ -1,0 +1,62 @@
+/**
+ * Brand palette, matching the app itself (selfhealthos-style.png / the app
+ * repo's frontend/src/app/globals.css): dark navy surfaces, a teal→blue→
+ * purple gradient accent. Primary interactive color is the gradient's blue
+ * midpoint - reads as a normal link/active-state color where a gradient
+ * would be too loud (nav items, inline links), while the gradient itself is
+ * reserved for the hero and brand marks (see src/pages/index.tsx).
+ */
+
+:root {
+  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary-dark: #2570f5;
+  --ifm-color-primary-darker: #1768f4;
+  --ifm-color-primary-darkest: #0f56d1;
+  --ifm-color-primary-light: #5194f7;
+  --ifm-color-primary-lighter: #5f9df8;
+  --ifm-color-primary-lightest: #8ab8fa;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-background-color: #f6f7fa;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #0b1220;
+  --ifm-footer-color: #c7cede;
+  --ifm-footer-link-color: #c7cede;
+  --ifm-footer-title-color: #ffffff;
+
+  --brand-teal: #2dd4bf;
+  --brand-blue: #3b82f6;
+  --brand-purple: #8b5cf6;
+  --brand-gradient: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-blue) 55%, var(--brand-purple) 100%);
+}
+
+/* For readability, a lighter step of the same hues in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #5b9bf7;
+  --ifm-color-primary-dark: #3f89f6;
+  --ifm-color-primary-darker: #2f7ef5;
+  --ifm-color-primary-darkest: #1665e0;
+  --ifm-color-primary-light: #77adf8;
+  --ifm-color-primary-lighter: #86b6f9;
+  --ifm-color-primary-lightest: #b0cefb;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --ifm-background-color: #05070d;
+  --ifm-navbar-background-color: #0d1420;
+  --ifm-background-surface-color: #0d1420;
+  --ifm-footer-background-color: #05070d;
+}
+
+.navbar {
+  box-shadow: 0 1px 0 0 var(--ifm-toc-border-color);
+}
+
+/* Gradient text, used sparingly - the hero "OS" suffix, section eyebrows.
+   Never on body copy or anything that also needs to stay legible as a link. */
+.text-gradient {
+  background: var(--brand-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

@@ -1,0 +1,14 @@
+release:
+  label: Release
+  permalink: /release
+  description: Tagged releases of selfhealthos.
+
+feature:
+  label: Feature
+  permalink: /feature
+  description: New features added to selfhealthos.
+
+fix:
+  label: Fix
+  permalink: /fix
+  description: Bug fixes shipped in selfhealthos.

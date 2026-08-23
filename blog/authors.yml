@@ -1,0 +1,6 @@
+selfhealthos:
+  name: selfhealthos
+  title: Project maintainer
+  url: https://github.com/selfhealthos/selfhealthos
+  image_url: /img/app-icon.png
+  page: false
