@@ -20,7 +20,7 @@ These four need to agree with each other and with however you actually reach the
 | Variable | Default | What it does |
 |---|---|---|
 | `SITE_URL` | `http://localhost` | The full URL you'll type into a browser. |
-| `DJANGO_ALLOWED_HOSTS` | `localhost,127.0.0.1` | Comma-separated hosts Django will accept a request addressed to — same host as `SITE_URL`, without the scheme. **Keep `127.0.0.1` in this list regardless of what else you add** — Docker's healthcheck for `django`/`mcp` calls itself over loopback, and if that check can never pass, `next` waits for it forever and never starts. |
+| `DJANGO_ALLOWED_HOSTS` | `localhost` | Comma-separated hosts Django will accept a request addressed to — same host as `SITE_URL`, without the scheme. You don't need to add `127.0.0.1` or `django` yourself — those are internal compose-network hostnames the backend always accepts, regardless of what's set here. |
 | `DJANGO_CSRF_TRUSTED_ORIGINS` | `http://localhost` | Comma-separated origins (with scheme) allowed to make unsafe requests — same value as `SITE_URL`. |
 | `NEXT_PUBLIC_SITE_URL` | `http://localhost` | Browser-visible origin, must match `SITE_URL`. Only used as a last-resort fallback when a request arrives with no usable `Host` header at all — in practice this rarely matters. |
 

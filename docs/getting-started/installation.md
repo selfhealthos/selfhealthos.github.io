@@ -45,7 +45,7 @@ DJANGO_CSRF_TRUSTED_ORIGINS=http://192.168.1.50
 NEXT_PUBLIC_SITE_URL=http://192.168.1.50
 ```
 
-**`127.0.0.1` must stay in `DJANGO_ALLOWED_HOSTS` alongside whatever you add** — Docker's own healthcheck for the `django`/`mcp` containers calls itself over the loopback address, and if that check can never pass, the frontend container waits for it forever and never starts.
+You don't need to add `127.0.0.1` or `django` to `DJANGO_ALLOWED_HOSTS` yourself — those are internal compose-network hostnames the backend always accepts regardless of what you set here (Docker's healthcheck calls itself over loopback, and the frontend's server-rendered pages talk to the `django` container directly by that name).
 
 Then `docker compose up -d` again to pick up the change, and see [Reverse proxy & HTTPS](../self-hosting/reverse-proxy.md) if you want a real domain and public HTTPS instead of a bare LAN IP.
 
