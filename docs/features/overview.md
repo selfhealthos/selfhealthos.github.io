@@ -8,7 +8,7 @@ sidebar_position: 1
 
 - **Multi-user, self-serve signup** — username and password only, no complexity rules imposed. This is your own server; `admin`/`admin` is a legitimate choice if that's what you want.
 - **Profile page** — a photo, your birth date, and sex. Birth date and sex feed the age/sex-personalised scoring bands used across the dashboard (VO2max, heart rate) — see [Heatmap & scoring](./heatmap-scoring.md).
-- **Settings page** — manage your Fitbit connection, generate scoped API access tokens, and get a ready-to-run command to connect the instance to Claude Code over MCP.
+- **Settings page** — manage your Fitbit connection, generate scoped API access tokens, choose which friends appear in the workout player, and get a ready-to-run command to connect the instance to Claude Code over MCP.
 - **A friendly, interactive API** — every endpoint documented and callable from a Swagger UI at `/api/docs` on your own instance.
 - **An MCP endpoint** — Claude Code (or any MCP client) can query your data directly. See [MCP integration](./mcp-integration.md).
 
@@ -31,6 +31,7 @@ Health is the home page — not one app among several, the whole point. See [The
 ## Fitness
 
 - **Workout** — two curated exercise-video playlists (mobility, bodyweight), stepped through in a random order one clip at a time. Completing a clip logs it as an exercise session, the same record the Activity page's logged-sessions table and the MCP tools read.
+- **[Friends & shared workouts](./friends.md)** — add a friend by username or friend code, tick them in the workout player, and every exercise you complete together lands on both dashboards. Friends can add shared workouts to your log and nothing else — no cross-user reads of any kind.
 
 ## Deployment
 
