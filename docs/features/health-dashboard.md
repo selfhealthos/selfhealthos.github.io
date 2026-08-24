@@ -24,6 +24,7 @@ Pulled in automatically once [Fitbit is connected](../getting-started/fitbit-set
 ## Fitness
 
 - **Workout** — pick one of two curated exercise-video playlists (an OPEX Fitness mobility library, a Darebee bodyweight library) and step through it one clip at a time, in a random order. The player shows a muted, looping video, a per-clip timer with 30/60/90-second audio cues, and Complete/Skip actions. Completing a clip logs it as an exercise session — the same record the Activity page's logged-sessions table and the MCP tools read.
+- **Tests** — the functional self-tests: grip strength, single-leg balance, sit-to-stand reps, dead hang time. Deliberately uncoloured — higher is better for all four, but there's no literature threshold for a dead hang, and grip norms vary by age, sex, hand and dynamometer by more than the difference the page is for. These are lines against your own history.
 
 ## Logged
 
@@ -32,8 +33,14 @@ Everything you record by hand:
 - **Habits** — see [Habits](./habits.md).
 - **Diet** — a food log with keyword-based flagging (caffeine, high-sugar, good-protein, LDL-lowering) and a "most eaten" view. There's no macro/calorie tracking — this logs *what* you ate, not a nutrition breakdown.
 - **Gut** — Bristol stool scale entries, plus a correlation view suggesting foods eaten before a bad day. This is explicitly framed as association, not causation — the view carries how many days each suspect food was actually eaten, specifically so a food you eat constantly (like breakfast) doesn't look falsely indicted just because it precedes everything.
-- **BP + Weight** — blood pressure and weight entries.
-- **Body** — tape-measure body measurements (waist, hips, neck, body fat %) and periodic fitness tests (grip strength, sit-to-stand reps, dead hang time).
+- **Blood pressure** — systolic and diastolic on one chart (one reading taken together, overlapping scales), against the 120/80 clinical thresholds rather than your own average. Was called "BP + Weight" until weight moved to Body; `/vitals` still redirects there.
+- **Body** — body composition, and the one page here you can write to from the browser. Record a weight, a waist (plus hips, neck, body fat %), your height and an optional target weight; backdate any of them, because the day an entry is filed under is stored rather than computed.
+
+  Weight and BMI share a chart on two axes — honest here only because they're the same quantity in two units at a fixed height, so the mapping between the axes is arithmetic rather than a flattering choice. The BMI axis is widened to fit the WHO 18.5–25 band, which is what the second axis buys and also why its line reads gentler.
+
+  Underneath is a colour-banded table — weight, BMI, waist, waist-to-height — scored the same way the [heatmap](./heatmap-scoring.md) is, one row per day something was actually recorded. Nothing is carried forward: a weight repeated down the column would colour days nobody stood on the scales.
+
+  **Waist-to-height leads the page and stays off the chart.** It needs no scales, it catches central adiposity that BMI misses entirely in someone of normal weight, and the healthy limit is one number worth remembering — keep your waist under half your height. It's in the table rather than the chart because it moves over months: eleven coloured cells render it better than a line of eleven points across two years.
 - **Labs** — blood marker results, grouped by marker name.
 - **Notes** — a searchable diary.
 - **Docs** — photographed documents.
