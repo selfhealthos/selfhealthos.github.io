@@ -8,7 +8,7 @@ sidebar_position: 1
 
 - **Multi-user, self-serve signup** — username and password only, no complexity rules imposed. This is your own server; `admin`/`admin` is a legitimate choice if that's what you want.
 - **Profile page** — a photo, your birth date, and sex. Birth date and sex feed the age/sex-personalised scoring bands used across the dashboard (VO2max, heart rate) — see [Heatmap & scoring](./heatmap-scoring.md).
-- **Settings page** — manage your Fitbit connection, generate scoped API access tokens, and get a ready-to-run command to connect the instance to Claude Code over MCP.
+- **Settings page** — manage your Fitbit connection, generate scoped API access tokens, choose which friends appear in the workout player, and get a ready-to-run command to connect the instance to Claude Code over MCP.
 - **A friendly, interactive API** — every endpoint documented and callable from a Swagger UI at `/api/docs` on your own instance.
 - **An MCP endpoint** — Claude Code (or any MCP client) can query your data directly. See [MCP integration](./mcp-integration.md).
 
@@ -24,13 +24,16 @@ Health is the home page — not one app among several, the whole point. See [The
 - **[Activity](./activity.md)** — step count, cumulative climb, logged workouts.
 - **Food diary** — with keyword-based flagging (caffeine, high-sugar, good-protein, etc.) and a gut-correlation view.
 - **[Habits](./habits.md)** — a completion grid with streaks and completion rates.
-- **Body measurements, lab results, notes, documents** — the rest of what a health record needs, all searchable.
+- **Body composition** — record your weight, waist, height and target weight from the browser; a weight/BMI chart on two axes, and a colour-banded table of weight, BMI, waist and waist-to-height scored against published thresholds.
+- **Blood pressure, lab results, notes, documents** — the rest of what a health record needs, all searchable.
 - **WFH tracking** — tap a day on the calendar to record it as worked in the office, and an office-day calendar with the yearly total, per-month breakdown, and a heatmap.
 - **Reports** — cross-metric views over the dataset. The Work From Home report averages every tracked metric by day type (WFH, office, weekend), with a "biggest swings" chart and a full comparison table.
 
 ## Fitness
 
 - **Workout** — two curated exercise-video playlists (mobility, bodyweight), stepped through in a random order one clip at a time. Completing a clip logs it as an exercise session, the same record the Activity page's logged-sessions table and the MCP tools read.
+- **Fitness self-tests** — grip strength, single-leg balance, sit-to-stand, dead hang, charted against your own history. Uncoloured on purpose: there's no published threshold for a dead hang worth painting a number with.
+- **[Friends & shared workouts](./friends.md)** — add a friend by username or friend code, tick them in the workout player, and every exercise you complete together lands on both dashboards. Friends can add shared workouts to your log and nothing else — no cross-user reads of any kind.
 
 ## Deployment
 
