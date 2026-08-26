@@ -17,7 +17,7 @@ sidebar_position: 1
 Health is the home page — not one app among several, the whole point. See [The Health dashboard](./health-dashboard.md) for the full page-by-page tour; in short:
 
 - **Daily summary & trends** — a day view, and multi-metric trend charts over 30/90/365-day windows.
-- **Entries** — every hand-logged entry (diet, exercise, gut, vitals, notes, documents, body measurements, fitness tests) flattened into one chronological timeline, paged a day at a time.
+- **Entries** — every hand-logged entry (diet, exercise, gym, gut, vitals, notes, documents, body measurements, fitness tests) flattened into one chronological timeline, paged a day at a time. Photographed meals and documents show their thumbnail on the card, gym sets group into one card per exercise, and anything logged in error can be deleted from the card itself.
 - **[Scored heatmap](./heatmap-scoring.md)** — every tracked metric, every day, colour-banded against literature-backed thresholds.
 - **[Sleep](./sleep.md)** — hypnogram, sleep architecture (onset, REM latency, wake episodes, cycles), overnight oxygen, and a plain-language verdict per night.
 - **Heart rate** — resting HR, HRV, heart rate zones, baselines.
@@ -27,10 +27,14 @@ Health is the home page — not one app among several, the whole point. See [The
 - **Body composition** — record your weight, waist, height and target weight from the browser; a weight/BMI chart on two axes, and a colour-banded table of weight, BMI, waist and waist-to-height scored against published thresholds.
 - **Blood pressure, lab results, notes, documents** — the rest of what a health record needs, all searchable.
 - **WFH tracking** — tap a day on the calendar to record it as worked in the office, and an office-day calendar with the yearly total, per-month breakdown, and a heatmap.
-- **Reports** — cross-metric views over the dataset. The Work From Home report averages every tracked metric by day type (WFH, office, weekend), with a "biggest swings" chart and a full comparison table.
+- **Reports** — cross-metric views over the dataset, each slicing every tracked metric a different way:
+  - **Work From Home** — every metric averaged by day type (WFH, office, weekend), with a "biggest swings" chart and a full comparison table.
+  - **Seasons** — every metric averaged by season, for the shifts that only show up across a year.
+  - **AI Prompt Report** — your whole record as one markdown document, ready to paste into ChatGPT, Gemini or Claude. No LLM is called by the app; the page just makes the paste as complete as possible.
 
 ## Fitness
 
+- **[Gym](./gym.md)** — weight-training sets logged on the phone, charted as tonnage (weight × reps, summed) per session, over a grid of working weights with exercises down and sessions across, newest first.
 - **Workout** — two curated exercise-video playlists (mobility, bodyweight), stepped through in a random order one clip at a time. Completing a clip logs it as an exercise session, the same record the Activity page's logged-sessions table and the MCP tools read.
 - **Fitness self-tests** — grip strength, single-leg balance, sit-to-stand, dead hang, charted against your own history. Uncoloured on purpose: there's no published threshold for a dead hang worth painting a number with.
 - **[Friends & shared workouts](./friends.md)** — add a friend by username or friend code, tick them in the workout player, and every exercise you complete together lands on both dashboards. Friends can add shared workouts to your log and nothing else — no cross-user reads of any kind.
