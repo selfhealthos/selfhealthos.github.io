@@ -17,7 +17,7 @@ sidebar_position: 1
 Health is the home page — not one app among several, the whole point. See [The Health dashboard](./health-dashboard.md) for the full page-by-page tour; in short:
 
 - **Daily summary & trends** — a day view, and multi-metric trend charts over 30/90/365-day windows.
-- **Entries** — every hand-logged entry (diet, exercise, gym, gut, vitals, notes, documents, body measurements, fitness tests) flattened into one chronological timeline, paged a day at a time. Photographed meals and documents show their thumbnail on the card, gym sets group into one card per exercise, and anything logged in error can be deleted from the card itself.
+- **Entries** — every hand-logged entry (diet, exercise, gym, gut, vitals, notes, documents, body measurements, fitness tests) flattened into one chronological timeline, paged a day at a time. Photographed meals and documents show their thumbnail on the card, gym sets group into one card per exercise, and anything logged in error can be corrected or deleted from the card itself — including its date and time, which re-files the entry on the day you move it to.
 - **[Scored heatmap](./heatmap-scoring.md)** — every tracked metric, every day, colour-banded against literature-backed thresholds.
 - **[Sleep](./sleep.md)** — hypnogram, sleep architecture (onset, REM latency, wake episodes, cycles), overnight oxygen, and a plain-language verdict per night.
 - **Heart rate** — resting HR, HRV, heart rate zones, baselines.

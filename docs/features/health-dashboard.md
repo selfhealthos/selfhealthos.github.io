@@ -14,7 +14,9 @@ Health is the app's home page. The sidebar is organised into four sections:
 
   **Gym sets group into one card per exercise**, listing each set as `80 kg x 10 reps` in the order it was performed. A leg day is thirty individual sets, and thirty cards would bury everything else logged that day. Deleting a gym card removes that exercise's whole set list for the day.
 
-  Anything logged in error can be **deleted from the card** — the × in its top-right corner, then a confirm. It's the only write this timeline has. Deletions are tombstoned rather than erased, so a row that came from the phone doesn't simply reappear at the next sync.
+  Anything logged in error can be **corrected or deleted from the card** — the pencil opens it into a form in place, the × deletes it after a confirm. Deletions are tombstoned rather than erased, so a row that came from the phone doesn't simply reappear at the next sync.
+
+  Editing covers the entry's own fields (a mistyped food name, a blood pressure reading keyed wrong) and **the date and time**. Moving the time past midnight re-files the entry on the new day and it leaves the day you're looking at, because the day an entry belongs to is stored rather than computed. Gym cards can't be edited — one card stands for a whole exercise's set list, so there's no single row "edit" would mean — and exercise and body-measurement rows take a new time but no field changes.
 - **Today** — the most recent day holding data (not literally today; if your watch hasn't synced yet this morning, showing an empty "today" would be less useful than showing last night's real numbers, with the header stating which day it actually is).
 - **Trends** — several metrics plotted over a 30/90/365-day window, each with a trailing moving average.
 - **Heatmap** — see [Heatmap & scoring](./heatmap-scoring.md).
