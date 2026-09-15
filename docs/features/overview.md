@@ -28,7 +28,7 @@ Health is the home page — not one app among several, the whole point. See [The
 - **Blood pressure, lab results, notes, documents** — the rest of what a health record needs, all searchable.
 - **WFH tracking** — tap a day on the calendar to record it as worked in the office, and an office-day calendar with the yearly total, per-month breakdown, and a heatmap.
 - **Reports** — cross-metric views over the dataset, each slicing every tracked metric a different way:
-  - **Work From Home** — every metric averaged by day type (WFH, office, weekend), with a "biggest swings" chart and a full comparison table.
+  - **Work From Home** — every metric averaged by day type (WFH, office, weekend), with a "biggest swings" chart and a full comparison table. **Save as PDF** prints the report through your browser (charts stay as vectors, the sidebar and header are dropped), and **Download CSV** gives you the same numbers as a spreadsheet — also available as a plain authenticated URL, `/api/v1/health/office/report.csv`, so a script with an API token can fetch it. A bucket with no days is an empty cell, never a zero.
   - **Seasons** — every metric averaged by season, for the shifts that only show up across a year.
   - **AI Prompt Report** — your whole record as one markdown document, ready to paste into ChatGPT, Gemini or Claude. No LLM is called by the app; the page just makes the paste as complete as possible.
 
