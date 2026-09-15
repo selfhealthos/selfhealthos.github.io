@@ -62,6 +62,6 @@ If you change these to reach the app from another device, see [Installation → 
 
 | Variable | Default | What it does |
 |---|---|---|
-| `CREDENTIAL_ENCRYPTION_KEY` | empty | Encrypts Fitbit OAuth credentials at rest. Optional — falls back to `DJANGO_SECRET_KEY` if unset, at the cost of every Fitbit connection needing to be re-authorised if you ever rotate that key. Generate the same way as `DJANGO_SECRET_KEY`. |
+| `CREDENTIAL_ENCRYPTION_KEY` | empty | Encrypts Fitbit and Withings OAuth credentials at rest. Optional — falls back to `DJANGO_SECRET_KEY` if unset, at the cost of every wearable connection needing to be re-authorised if you ever rotate that key. Generate the same way as `DJANGO_SECRET_KEY`. |
 
-See [Connect Fitbit](./fitbit-setup.md) for the OAuth app registration steps this key protects.
+See [Connect Fitbit](./fitbit-setup.md) and [Connect Withings](./withings-setup.md) for the OAuth app registration steps this key protects.

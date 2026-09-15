@@ -8,7 +8,7 @@ sidebar_position: 1
 
 - **Multi-user, self-serve signup** — username and password only, no complexity rules imposed. This is your own server; `admin`/`admin` is a legitimate choice if that's what you want.
 - **Profile page** — a photo, your birth date, and sex. Birth date and sex feed the age/sex-personalised scoring bands used across the dashboard (VO2max, heart rate) — see [Heatmap & scoring](./heatmap-scoring.md).
-- **Settings page** — manage your Fitbit connection, generate scoped API access tokens, choose which friends appear in the workout player, and get a ready-to-run command to connect the instance to Claude Code over MCP.
+- **Settings page** — manage your Fitbit and Withings connections, generate scoped API access tokens, choose which friends appear in the workout player, and get a ready-to-run command to connect the instance to Claude Code over MCP.
 - **A friendly, interactive API** — every endpoint documented and callable from a Swagger UI at `/api/docs` on your own instance.
 - **An MCP endpoint** — Claude Code (or any MCP client) can query your data directly. See [MCP integration](./mcp-integration.md).
 
@@ -24,7 +24,7 @@ Health is the home page — not one app among several, the whole point. See [The
 - **[Activity](./activity.md)** — step count, cumulative climb, logged workouts.
 - **Food diary** — with keyword-based flagging (caffeine, high-sugar, good-protein, etc.) and a gut-correlation view.
 - **[Habits](./habits.md)** — a completion grid with streaks and completion rates.
-- **Body composition** — record your weight, waist, height and target weight from the browser; a weight/BMI chart on two axes, and a colour-banded table of weight, BMI, waist and waist-to-height scored against published thresholds.
+- **Body composition** — record your weight, waist, height and target weight from the browser, or sync weight and body fat automatically from a [Withings scale](../getting-started/withings-setup.md); a weight/BMI chart on two axes, and a colour-banded table of weight, BMI, waist and waist-to-height scored against published thresholds.
 - **Blood pressure, lab results, notes, documents** — the rest of what a health record needs, all searchable.
 - **WFH tracking** — tap a day on the calendar to record it as worked in the office, and an office-day calendar with the yearly total, per-month breakdown, and a heatmap.
 - **Reports** — cross-metric views over the dataset, each slicing every tracked metric a different way:

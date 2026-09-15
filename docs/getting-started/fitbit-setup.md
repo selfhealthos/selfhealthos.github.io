@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Connect Fitbit
 
-Fitbit is the first (and currently only) wearable integration. Once connected, a background job pulls your sleep sessions (with hypnogram detail), heart rate, and activity data in.
+Fitbit is one of two wearable integrations — see [Connect Withings](./withings-setup.md) for scales. Once connected, a background job pulls your sleep sessions (with hypnogram detail), heart rate, and activity data in.
 
 ## 1. Register a Fitbit app
 

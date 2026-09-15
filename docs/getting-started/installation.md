@@ -53,4 +53,5 @@ Then `docker compose up -d` again to pick up the change, and see [Reverse proxy 
 
 - [Configuration reference](./configuration.md) — every `.env` variable, what it does
 - [Connect Fitbit](./fitbit-setup.md) — sync sleep, heart rate and activity from a Fitbit account
+- [Connect Withings](./withings-setup.md) — sync weight and body composition from a Withings scale, or import years of history from a data export
 - [Feature overview](../features/overview.md) — what's actually on the dashboard
