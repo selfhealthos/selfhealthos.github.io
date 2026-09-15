@@ -81,7 +81,7 @@ The command also accepts a `getmeas` JSON dump if you have one, which is prefera
 
 ## 4. Sync
 
-Once connected, sync runs as a background job. A **Sync now** control is available from the dashboard, the same as for Fitbit.
+Once connected, sync runs as a background job. A **Sync now** control sits on the same **Settings → Wearables → Withings** card where you saved the credentials, with a field for how many days back to pull (up to 30 — longer than that is a backfill, and belongs in the import command above).
 
 Weight readings land as ordinary weight entries — the same kind of record you'd create by typing a weight into the app — so they appear on the entries timeline, feed the weight/BMI chart, and can be corrected or deleted individually. They are not a separate, read-only class of data.
 
