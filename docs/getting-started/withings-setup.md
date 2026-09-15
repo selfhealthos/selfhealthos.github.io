@@ -59,9 +59,28 @@ As with Fitbit, the client secret is write-only: once saved the form always show
 
 ## 3. Import your history
 
-Connecting only syncs recent measurements. If you've been weighing yourself on a Withings scale for years, that history is worth bringing in all at once — and you don't need to wait for the connection to catch up.
+Connecting only syncs recent measurements — the sync window is capped at 30 days. If you've been weighing yourself on a Withings scale for years, that history is worth bringing in all at once.
 
-Export your data from the Withings app (**Profile → Download my data**), which arrives as a zip of CSV files, then:
+### From the connected account (easiest)
+
+If you've completed the steps above, you already have everything you need. No export, no waiting:
+
+```bash
+docker compose exec django python manage.py backfill_withings \
+  --user yourusername --dry-run
+```
+
+`--dry-run` fetches and reports without writing — it prints the full date range, a count by year, and which measurements are present. Run it first. Then drop the flag to write:
+
+```bash
+docker compose exec django python manage.py backfill_withings --user yourusername
+```
+
+This is cheap: `getmeas` takes an arbitrary date range and pages 500 readings at a time, so a decade of daily weigh-ins is typically a single API request. Add `--days N` to limit the window; the default reaches back further than any Withings account can go.
+
+### From a data export
+
+Use this when the account isn't connected, or you're working from an export of an account you no longer have access to. Export your data from the Withings app (**Profile → Download my data**), which arrives as a zip of CSV files, then:
 
 ```bash
 docker compose exec django python manage.py import_withings \
@@ -75,9 +94,11 @@ docker compose exec django python manage.py import_withings \
   --user yourusername /path/to/weight.csv /path/to/bp.csv
 ```
 
-The import is **idempotent**: readings are keyed on the instant they were taken, so running it twice, or importing a period the live sync has already covered, adds nothing the second time. Import years of history once, then let the ordinary sync keep up — the two overlap at the join without doubling anything.
+Both commands are **idempotent**: readings are keyed on the instant they were taken, so running one twice — or backfilling a period the live sync has already covered — adds nothing the second time. Import years of history once, then let the ordinary sync keep up; the two overlap at the join without doubling anything.
 
-The command also accepts a `getmeas` JSON dump if you have one, which is preferable when your history spans a move between timezones — see below.
+The command also accepts a `getmeas` JSON dump if you have one.
+
+Prefer `backfill_withings` to a CSV import where you can. Every measure group from the API carries the timezone it was recorded in; a CSV export carries none, so those readings are interpreted in your profile's timezone instead. If your history spans a move between timezones, that difference decides which calendar day some readings land on.
 
 ## 4. Sync
 
