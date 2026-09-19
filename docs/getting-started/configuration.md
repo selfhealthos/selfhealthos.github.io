@@ -49,6 +49,7 @@ If you change these to reach the app from another device, see [Installation → 
 | `DJANGO_DEBUG` | `true` | Set `false` for a production-style deploy. |
 | `DJANGO_LOG_LEVEL` | `INFO` | Standard Python logging level. |
 | `DJANGO_TIME_ZONE` | `UTC` | Server-side time zone. Per-account display time zone is separate and lives on the account. |
+| `SYNC_INTERVAL_S` | `3600` | How often the `beat` container asks each connected wearable for new data, in seconds. Hourly is as often as Fitbit's per-app rate limit usefully allows; raise it if several accounts share one Fitbit app. |
 
 ## Database & cache
 

@@ -26,10 +26,10 @@ Six tools, shaped around the questions people actually ask rather than one per R
 | Tool | Scope | Answers |
 |---|---|---|
 | `health_describe` | `health:read` | What data exists, and over what period — call this first. |
-| `health_day` | `health:read` | Everything recorded for one day: sleep, activity, heart, food, training, gut, habits, notes. |
+| `health_day` | `health:read` | Everything recorded for one day: sleep, activity, heart, food, training, gut, habits, notes. Takes `date` (`YYYY-MM-DD`); omit it for the most recent day holding data. |
 | `health_trend` | `health:read` | One metric over a date range, with a moving average and a rising/falling/flat direction. |
 | `health_correlate` | `health:read` | Two metrics compared over the days both were recorded, with an explicit caution that this is association, not causation. |
-| `health_search` | `health:read` | Free-text search across notes and the food diary. |
+| `health_search` | `health:read` | Free-text search across notes and the food diary. Pass `*` as the query to browse everything, most recent first. |
 | `health_log` | `health:write` | Record a new entry (weight, blood pressure, a Bristol score, a food, a note). |
 
 A token holding only `health:read` cannot see `health_log` in its tool list at all — not just "cannot call it," genuinely hidden from discovery. Scopes are enforced at two layers: the connection itself is rejected without a valid token, and each tool call is checked against what that specific token was issued with.

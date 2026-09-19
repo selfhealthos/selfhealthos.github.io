@@ -23,7 +23,10 @@ Health is the app's home page. The sidebar is organised into four sections:
 
 ## Wearable
 
-Pulled in automatically once [Fitbit is connected](../getting-started/fitbit-setup.md):
+Pulled in automatically once [Fitbit is connected](../getting-started/fitbit-setup.md) — the `beat` container asks each connected wearable for new data every hour (`SYNC_INTERVAL_S`), on top of the **Sync now** button on each connection's settings card. Each run re-pulls the last few days rather than only new ones, because a watch backfills last night's sleep stages and resting heart rate hours after the fact.
+
+If a connection stops collecting, its settings card says so: a grant that can no longer be used — usually because `DJANGO_SECRET_KEY` or `CREDENTIAL_ENCRYPTION_KEY` was rotated after connecting — is marked **Needs reconnecting** rather than left reading as healthy.
+
 
 - **Sleep** — see [Sleep](./sleep.md).
 - **Heart** — resting heart rate and HRV over time (each plotted against a trailing 30-day baseline), a per-day heart rate trace with Fitbit's own zone boundaries, and a scored table (resting HR, HRV, VO2max, active/vigorous minutes).
